@@ -2,13 +2,13 @@ pipeline {
     agent none
         stages {
                  stage ('build'){
-                     agent { label 'node1'}
+                     agent { label 'node-2'}
                      steps {
                              echo "this stage is running successfully"
                          }
                      }
                      stage ('deploy'){
-                         agent {label 'node2'}
+                         agent {label 'node-3'}
                          steps{
                              echo "test stage as been build successfully"
                          }
